@@ -17,19 +17,23 @@ export default function NaveBar() {
       route: "/",
     },
     {
+      name: "Branches",
+      route: "/Branches",
+    },
+    {
       name: "About Us",
       route: "/AboutUs",
     },
     {
-      name: "Contact Us",
-      route: "/ContactUs",
-    }
+      name: "Achievement",
+      route: "/Achievement",
+    },
   ];
 
   const HtmlBtns: Array<JSX.Element> = btns.map(({ name, route }, i) => {
     return (
       <button key={i}
-        className="inline-flex h-10 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+        className=" font-bold"
         onClick={() => {
           navigate(route)
           setIsMenuOpen(false)
@@ -41,8 +45,8 @@ export default function NaveBar() {
 
 
   return (
-    <nav className="p-2 lg:p-0 sticky top-0 z-[100] bg-transparent"  >
-      <div className="flex lg:flex-row-reverse flex-wrap items-center justify-evenly">
+    <nav className="bg-transparent backdrop-filter backdrop-blur-xl pt-2  sticky top-0 z-[100]  flex justify-center"  >
+      <div className="flex flex-row-reverse flex-wrap items-center justify-between border-b-2 w-[90vw] pb-2 border-[#000] ">
         <button
           type="button"
           className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden bg-gray-100"
@@ -65,6 +69,11 @@ export default function NaveBar() {
         </button>
 
 
+        <div className="hidden md:block font-bold rounded-3xl py-2 px-4 cursor-pointer bg-[#009BB0] text-[#fff]" onClick={() => {
+          navigate("/ContactUs")
+          setIsMenuOpen(false)
+        }}>Contact us</div>
+
 
         <div
           className={`${isMenuOpen ? "absolute" : "hidden"
@@ -79,7 +88,7 @@ export default function NaveBar() {
         <div className="lg:block cursor-pointer" onClick={() => navigate("/")}>
           <img
             src='/ImgsCompomets/NavBaricon.webp'
-            className="h-[10vh]"
+            className="h-[8vh]"
             alt="Logo"
           />
         </div>
