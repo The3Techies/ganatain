@@ -10,7 +10,7 @@ export default function Hero() {
 
 
     return (
-        <div className="w-full h-[100vh] bg-[url(/HomePageImgs/HeroBg.webp)] bg-cover -mt-20 lg:-mt-12 2xl:-mt-20 flex flex-col justify-center items-center">
+        <div className="w-full h-[100vh] bg-[url(/HomePageImgs/HeroBg.webp)] bg-cover flex flex-col justify-center items-center">
 
             <h1 className="font-bold text-base lg:text-lg 2xl:text-2xl mt-8">Ard Al-ganatian Company</h1>
             <p className="text-[#fff] text-balance text-center max-w-[70vw] text-xs lg:text-base 2xl:text-xl mt-4">One of the leading healthcare distributors in Yemen that specializes in the sales and distribution of pharmaceuticals, medical appliances, and other medical supplies. </p>
