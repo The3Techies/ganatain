@@ -20,7 +20,7 @@ const ScrollToTop = () => {
 
 const App = () => {
   return (
-    <div >
+    <div className=' font-mono'>
       <BrowserRouter>
         <ScrollToTop />
         <NaveBar />
