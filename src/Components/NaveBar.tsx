@@ -91,7 +91,7 @@ export default function NaveBar() {
         </button>
 
 
-        <div className="hidden md:block font-bold rounded-3xl py-2 px-4 cursor-pointer bg-[#009BB0] text-[#fff]" onClick={() => {
+        <div className="hidden md:block font-bold rounded-3xl py-2 px-4 cursor-pointer bg-[#009BB0] text-[#000000]" onClick={() => {
           navigate("/ContactUs")
           setIsMenuOpen(false)
         }}>Contact us</div>
@@ -102,9 +102,9 @@ export default function NaveBar() {
             } w-full lg:block lg:w-auto right-0 top-12 z-50 bg-[#c8ffff] lg:bg-transparent`}
           id="navbar-solid-bg"
         >
-          <ul className="flex flex-col py-2 lg:py-0 lg:flex-row font-medium mt-4 lg:mr-6 lg:mt-0 gap-6 ">
+          <div className="flex flex-col py-2 lg:py-0 lg:flex-row font-medium mt-4 lg:mr-6 lg:mt-0 gap-6 ">
             {HtmlBtns}
-          </ul>
+          </div>
         </div>
 
         <div className="lg:block cursor-pointer" onClick={() => navigate("/")}>
