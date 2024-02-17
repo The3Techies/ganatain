@@ -33,7 +33,7 @@ export default function Hero() {
                         <div className="col-start-9 row-start-2 row-span-2 col-span-2 text-3xl md:text-4xl cursor-pointer 2xl:text-6xl text-[#1DA1F2]" onClick={() => window.open("https://protechies.netlify.app/", "_blank")} ><FaTwitter /></div>
                         <div className="col-start-10 row-start-5 row-span-2 col-span-2 text-3xl md:text-4xl cursor-pointer 2xl:text-6xl text-[#E1306C]" onClick={() => window.open("https://protechies.netlify.app/", "_blank")}><FaInstagram /></div>
                     </div>
-                    <div className="rounded-3xl py-2 px-4 cursor-pointer bg-[#009BB0] text-[#fff] text-base 2xl:text-xl mb-2" onClick={() => { navigate("/ContactUs") }}>Contact us</div>
+                    <div className="rounded-3xl py-2 px-4 cursor-pointer bg-[#009BB0] text-[#000000] text-base 2xl:text-xl mb-2 font-extrabold" onClick={() => { navigate("/ContactUs") }}>Contact us</div>
                 </div>
 
 
