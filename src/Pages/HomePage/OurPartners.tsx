@@ -1,5 +1,3 @@
-import { useState, } from "react";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 interface PartnersData {
     name: string;
@@ -64,40 +62,88 @@ const partners: PartnersData[] = [
         link: "https://dppcco.com/?lang=en"
     },
     {
-        name: "D.P.P.C",
-        img: "/HomePageImgs/dppc.webp",
+        name: "Terumo",
+        img: "/HomePageImgs/Terumo.webp",
+        link: "https://www.terumomedical.com/"
+    },
+    {
+        name: "Al Andalous",
+        img: "/HomePageImgs/Al-Andalous.webp",
+        link: "https://www.alandalous.org/"
+    },
+    {
+        name: "Novartis",
+        img: "/HomePageImgs/Novartis.webp",
+        link: "https://www.novartis.com/"
+    },
+    {
+        name: "Dynamic",
+        img: "/HomePageImgs/Dynamic.webp",
+        link: "https://www.dynamictechnomedicals.com/"
+    },
+    {
+        name: "Liptis",
+        img: "/HomePageImgs/Liptis.webp",
+        link: "http://www.liptis.com/cgi-sys/defaultwebpage.cgi"
+    },
+    {
+        name: "Geratherm",
+        img: "/HomePageImgs/Geratherm.webp",
+        link: "https://www.geratherm.com/"
+    },
+    {
+        name: "Prime Care Ortho",
+        img: "/HomePageImgs/Prime-Care-Ortho.webp",
+        link: "http://www.primecareortho.com/"
+    },
+    {
+        name: "Pharma-International",
+        img: "/HomePageImgs/Pharma-International.webp",
         link: "https://dppcco.com/?lang=en"
+    },
+    {
+        name: "Qatar Pharma",
+        img: "/HomePageImgs/Qatar-Pharma.webp",
+        link: "https://qatarpharma.org/new/"
+    },
+    {
+        name: "Medisal",
+        img: "/HomePageImgs/Medisal.webp",
+        link: "http://www.medisal.ae/"
+    },
+    {
+        name: "P&G",
+        img: "/HomePageImgs/P&G.webp",
+        link: "https://us.pg.com/"
+    },
+    {
+        name: "Vasmed",
+        img: "/HomePageImgs/Vasmed.webp",
+        link: "https://www.vasmedtech.com/live/"
     },
 ]
 
 
+const partnersHtml = partners.map((section, index) => (
+    <div key={index} className="md:w-[12.5%]  w-[25%] flex flex-col items-center cursor-pointer" onClick={() => window.open(section.link, "_blank")}>
+        <img className="w-[90%] aspect-[2] object-contain" src={section.img} alt={"icon for " + section.name} />
+        <p className="text-center text-[#3E5A69] text-xs lg:text-base">{section.name}</p>
+    </div>
+))
+
 
 
 export default function OurPartners() {
-    const [index, setIndex] = useState<number>(0)
 
     return (
-        <div className="py-4 flex flex-col items-center ">
-            <h1 className="text-[#000] font-bold text-2xl lg:text-3xl 2xl:text-5xl border-l-[5px] border-[#0c9c4a] lg:mt-0 mt-10 pl-4 mb-6 ">Our Partners</h1>
+        <div className="py-6 flex flex-col items-center bg-[#F3F7F9]">
+            <h1 className="text-[#3E5A69] font-bold text-lg md:text-xl lg:text-2xl 2xl:text-3xl">Who do we represent?</h1>
+            <p className=" text-center max-w-[80%] text-xs 2xl:text-lg mt-1 "> Ard Al-Ganatain Company represents numerous leading Arab and European pharmaceuticals and medical appliances companies in the field of producing pharmaceuticals and medical appliances which are:</p>
 
-            <div className="flex lg:gap-2 w-full justify-center items-center select-none">
-
-                <FaArrowLeft className="text-2xl cursor-pointer"
-                    onClick={() => {
-                        if (index - 1 < 0) setIndex(0)
-                        else setIndex(index - 1)
-                    }} />
-                <img className="lg:w-[22%] w-[92%] aspect-[2/1] object-contain border-4 rounded-xl border-[#000] cursor-pointer" src={`${partners[index].img}`} alt={`partners ${index + 1} img`} onClick={() => window.open(partners[index].link, "_blank")} />
-                <img className="w-[22%] lg:block hidden aspect-[2/1] object-contain border-4 rounded-xl border-[#000] cursor-pointer" src={`${partners[index + 1].img}`} alt={`partners ${index + 2} img`} onClick={() => window.open(partners[index + 1].link, "_blank")} />
-                <img className="w-[22%] lg:block hidden aspect-[2/1] object-contain border-4 rounded-xl border-[#000] cursor-pointer" src={`${partners[index + 2].img}`} alt={`partners ${index + 3} img`} onClick={() => window.open(partners[index + 2].link, "_blank")} />
-                <img className="w-[22%] lg:block hidden aspect-[2/1] object-contain border-4 rounded-xl border-[#000] cursor-pointer" src={`${partners[index + 3].img}`} alt={`partners ${index + 4} img`} onClick={() => window.open(partners[index + 3].link, "_blank")} />
-                <FaArrowRight className="text-2xl cursor-pointer"
-                    onClick={() => {
-                        if (index + 3 === partners.length - 1) setIndex(index)
-                        else setIndex(index + 1)
-                    }} />
-
+            <div className="w-[90%] bg-[#fff] mt-4 rounded-lg shadow-[1px_4px_4px_0px] shadow-[#000000] flex flex-wrap justify-center gap-y-2 py-4">
+                {partnersHtml}
             </div>
+
         </div>
     );
 }
