@@ -58,7 +58,7 @@ const values: ValuesData[] = [
 ]
 
 const valuesHtml = values.map((section, index) => (
-    <div key={index} className="lg:w-[22%] md:w-[48%] w-[48%]  flex flex-col items-center">
+    <div key={index} className="lg:w-[22%]  w-[48%]  flex flex-col items-center">
         <img className="w-[30%] aspect-square mb-4" src={section.icon} alt={"icon for " + section.name} />
         <div className={"w-full md:h-80 h-64 rounded-xl shadow-[1px_4px_4px_0px] shadow-[#000000] flex flex-col items-center  " + section.bg}>
             <div className="relative">
@@ -76,7 +76,7 @@ const valuesHtml = values.map((section, index) => (
 
 export default function OurCoreValues() {
     return (
-        <div className="py-6 flex flex-col items-center">
+        <div className="py-6 flex flex-col items-center bg-[#F3F7F9]">
             <h1 className="text-[#3E5A69] font-bold text-lg md:text-xl lg:text-2xl 2xl:text-3xl">Our Core Values</h1>
 
             <div className="w-[90%] mt-6">
