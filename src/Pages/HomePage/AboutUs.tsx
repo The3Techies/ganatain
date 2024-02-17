@@ -59,6 +59,7 @@ export default function AboutUs() {
             {AboutUsInfoHtml}
           </div>
         </div>
+        
       </div>
 
     </div>

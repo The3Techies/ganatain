@@ -137,8 +137,8 @@ export default function OurPartners() {
 
     return (
         <div className="py-6 flex flex-col items-center bg-[#F3F7F9]">
-            <h1 className="text-[#3E5A69] font-bold text-lg md:text-xl lg:text-2xl 2xl:text-3xl">Who do we represent?</h1>
-            <p className=" text-center max-w-[80%] text-xs 2xl:text-lg mt-1 "> Ard Al-Ganatain Company represents numerous leading Arab and European pharmaceuticals and medical appliances companies in the field of producing pharmaceuticals and medical appliances which are:</p>
+            <h1 className="text-[#3E5A69] font-bold text-lg md:text-xl lg:text-2xl 2xl:text-3xl border-l-4 pl-2 border-[#3E5A69]">Who do we represent?</h1>
+            <p className="mt-2 text-center max-w-[75%] text-xs 2xl:text-lg"> Ard Al-Ganatain Company represents numerous leading Arab and European pharmaceuticals and medical appliances companies in the field of producing pharmaceuticals and medical appliances which are:</p>
 
             <div className="w-[90%] bg-[#fff] mt-4 rounded-lg shadow-[1px_4px_4px_0px] shadow-[#000000] flex flex-wrap justify-center gap-y-2 py-4">
                 {partnersHtml}
