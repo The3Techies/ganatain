@@ -7,7 +7,6 @@ interface ValuesData {
 
 const values: ValuesData[] = [
     {
-        // HomePageImgs
         icon: "/HomePageImgs/PartnershipIcon.webp",
         name: "Partnership",
         discretion: "We improve the partnership with pharmaceutical and medical appliances manufacturers.",
@@ -22,19 +21,19 @@ const values: ValuesData[] = [
     {
         icon: "/HomePageImgs/ExcellenceIcon.webp",
         name: "Excellence",
-        discretion: "Adherence to the most professional practices in marketing pharmaceuticals to always exceed the expectations of our clients and business partners",
+        discretion: "Adherence to the most professional practices in marketing pharmaceuticals.",
         bg: "bg-[#EC9922]",
     },
     {
         icon: "/HomePageImgs/PreparednessIcon.webp",
         name: "Preparedness and availability",
-        discretion: "The most ideal utilization of available capabilities to provide medicine at the right time with high effectiveness",
+        discretion: "The most ideal utilization of available capabilities.",
         bg: "bg-[#00B1EB]",
     },
     {
         icon: "/HomePageImgs/CredibilityIcon.webp",
         name: "Credibility and accountability",
-        discretion: "We maintain our credibility and submit ourselves to accountability, as we are committed to the ethics of the profession",
+        discretion: "We maintain our credibility and submit ourselves to accountability.",
         bg: "bg-[#FF826E]",
     },
     {
@@ -46,13 +45,13 @@ const values: ValuesData[] = [
     {
         icon: "/HomePageImgs/OutstandingIcon.webp",
         name: "Outstanding responsiveness",
-        discretion: "We always work on enhancing our response for the urgent need of medicine to consolidate confidence in the company",
+        discretion: "We always work on enhancing our response for the urgent need of medicine.",
         bg: "bg-[#99E6FC]",
     },
     {
         icon: "/HomePageImgs/JointIcon.webp",
         name: "Joint responsibility",
-        discretion: "We practice joint responsibility to ensure a complementary relationship between ourselves and all the stakeholders",
+        discretion: "We ensure a complementary relationship between ourselves and all the stakeholders",
         bg: "bg-[#EFBE9C]",
     },
 ]
