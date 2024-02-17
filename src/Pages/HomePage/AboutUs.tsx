@@ -55,15 +55,11 @@ export default function AboutUs() {
 
         <div className="md:w-[49%] flex flex-col justify-between ">
           <img className="rounded-xl w-full h-[40%] object-cover shadow-[1px_4px_4px_0px] shadow-[#000000] mt-4 md:mt-0" src="/HomePageImgs/aboutUs.webp" alt="about us img" />
-          <div className="w-full h-[58%] flex flex-wrap justify-center items-center gap-x-4 bg-[#FFFFFF] rounded-xl shadow-[1px_4px_4px_0px] shadow-[#000000] mt-4 md:mt-0">
+          <div className="w-full aspect-square  md:h-[58%] flex flex-wrap justify-center items-center gap-x-4 bg-[#FFFFFF] rounded-xl shadow-[1px_4px_4px_0px] shadow-[#000000] mt-4 md:mt-0">
             {AboutUsInfoHtml}
           </div>
         </div>
       </div>
-
-
-
-
 
     </div>
   );

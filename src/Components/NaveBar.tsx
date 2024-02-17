@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 
 export default function NaveBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [navBarStyly, setNavBarStyly] = useState("bg-[#009BB0]");
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -44,12 +45,33 @@ export default function NaveBar() {
   });
 
 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const isAtTop = scrollTop === 0;
+
+      if (isAtTop)
+        setNavBarStyly("bg-[#009BB0]")
+      else
+        setNavBarStyly("bg-transparent")
+
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   return (
-    <nav className="bg-transparent backdrop-filter backdrop-blur-xl pt-2  sticky top-0 z-[100]  flex justify-center"  >
+    <nav className={"backdrop-filter backdrop-blur-xl pt-2  sticky top-0 z-[100] flex justify-center " + navBarStyly}  >
       <div className="flex flex-row-reverse flex-wrap items-center justify-between border-b-2 w-[90vw] pb-2 border-[#000] ">
         <button
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden bg-gray-100"
+          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden border-2 "
           onClick={toggleMenu}
         >
           <span className="sr-only">Open main menu</span>
