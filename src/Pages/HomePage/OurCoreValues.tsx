@@ -58,14 +58,17 @@ const values: ValuesData[] = [
 
 const valuesHtml = values.map((section, index) => (
     <div key={index} className="lg:w-[22%]  w-[48%]  flex flex-col items-center">
+
         <img className="w-[30%] aspect-square mb-4" src={section.icon} alt={"icon for " + section.name} />
-        <div className={"w-full md:h-80 h-64 rounded-xl shadow-[1px_4px_4px_0px] shadow-[#000000] flex flex-col items-center  " + section.bg}>
+
+        <div className={"w-full flex-grow pb-6 rounded-xl shadow-[1px_4px_4px_0px] shadow-[#000000] flex flex-col items-center  " + section.bg}>
+
             <div className="relative">
-                <div className="border-l-[50px] border-l-transparent border-t-[75px] border-t-[#fff] border-r-[50px] border-r-transparent -mt-[1px] relative"></div>
+                <div className="border-l-[50px] border-l-transparent border-t-[75px] border-t-[#F3F7F9] border-r-[50px] border-r-transparent -mt-[1px] relative"></div>
                 <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-6 h-6 bg-[#3E5A69] shadow-[4px_4px_4px_0px] shadow-[#000000]"></div>
             </div>
             <h1 className="text-center mt-2 text-[#3E5A69] font-bold text-sm md:text-lg lg:text-xl 2xl:text-2xl">{section.name}</h1>
-            <p className="text-center mt-2 text-[#fff] max-w-[90%] text-xs md:text-sm lg:text-base 2xl:text-lg">{section.discretion}</p>
+            <p className="text-center mt-2 text-[#fff] max-w-[90%] text-xs md:text-sm lg:text-sm 2xl:text-lg">{section.discretion}</p>
 
         </div>
 
@@ -76,10 +79,10 @@ const valuesHtml = values.map((section, index) => (
 export default function OurCoreValues() {
     return (
         <div className="py-6 flex flex-col items-center bg-[#F3F7F9]">
-            <h1 className="text-[#3E5A69] font-bold text-lg md:text-xl lg:text-2xl 2xl:text-3xl">Our Core Values</h1>
+            <h1 className="text-[#3E5A69] font-bold text-lg md:text-xl lg:text-2xl 2xl:text-3xl border-l-4 pl-2 border-[#3E5A69]">Our Core Values</h1>
 
             <div className="w-[90%] mt-6">
-                <div className="w-full flex flex-wrap justify-between gap-y-6">
+                <div className="w-full flex flex-wrap justify-between gap-y-6 ">
                     {valuesHtml}
                 </div>
             </div>
