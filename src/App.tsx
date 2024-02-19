@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import NaveBar from './Components/NaveBar';
 import Home from './Pages/HomePage/Home';
 import AboutUs from './Pages/AboutUsPage/AboutUs';
+import Achievement from './Pages/AchievementPage/Achievement';
 import ContactUs from './Pages/ContactUsPage/ContactUs';
 import Footer from './Components/Footer';
 
@@ -27,6 +28,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Achievement" element={<Achievement />} />
           <Route path="/ContactUs" element={<ContactUs />} />
         </Routes>
         <Footer />
