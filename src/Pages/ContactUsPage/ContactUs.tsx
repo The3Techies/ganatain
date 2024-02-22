@@ -1,14 +1,12 @@
-import OurBranches from "./OurBranches";
-import OurContacts from "./OurContacts";
-import Form from "./Form";
+import Hero from "./Hero";
+import CountactInfo from "./CountactInfo";
 
 
 export default function ContactUs() {
-    return (
-      <div>
-        <OurBranches/>
-        <OurContacts/>
-        <Form/>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Hero />
+      <CountactInfo />
+    </div>
+  );
+}
