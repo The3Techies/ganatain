@@ -75,7 +75,6 @@ export default function Awards() {
 
   return (
 
-
     <div className="bg-[#FFFFFF] flex justify-center py-6">
 
       <div className="w-[90%] select-none">
